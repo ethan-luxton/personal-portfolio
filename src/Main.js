@@ -1,11 +1,9 @@
 import React from 'react'
-import PopupFunction from './PopupFunction'
-import Popup from './Popup';
 import Card from 'react-bootstrap/Card';
-import Container from 'react-bootstrap/Container';
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faFile, faDiagramProject} from '@fortawesome/free-solid-svg-icons'
+import {faFile} from '@fortawesome/free-solid-svg-icons'
 import Button from 'react-bootstrap/Button';
 
 
@@ -15,6 +13,13 @@ class Main extends React.Component {
     
     render() {
         return (
+            
+
+                
+            
+            
+            
+                
             <body>
                 
                     
@@ -23,11 +28,9 @@ class Main extends React.Component {
                     <h1>About</h1>
                     
                 </section>
-                <Popup>
-            
-                </Popup>
+                
                 <section class='cards'>
-                    <Container>
+                    <div>
                         <Card style={{ width: '18rem' }}>
                             <Card.Body>
                                 <Card.Title>My Resume</Card.Title>
@@ -37,9 +40,9 @@ class Main extends React.Component {
                                 <Button href='https://drive.google.com/file/d/1RNsPPZ63djnJyBbikAo831UWBMC5E_HJ/view?usp=sharing' target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFile}/> Resume</Button>
                             </Card.Body>
                         </Card>
-                    </Container>
+                    </div>
                     
-                    <Container>
+                    <div>
                         <Card style={{ width: '18rem' }}>
     
                             <Card.Body>
@@ -47,11 +50,10 @@ class Main extends React.Component {
                                 <Card.Text>
                                     For more information on my relevant work experience, click the link below to view my most up-to-date resume.
                                 </Card.Text>
-                                <PopupFunction/>
                             </Card.Body>
                         </Card>
-                    </Container>
-                    <Container>
+                    </div>
+                    <div>
                         <Card style={{ width: '18rem' }}>
     
                             <Card.Body>
@@ -62,7 +64,7 @@ class Main extends React.Component {
                                 <Button href='https://drive.google.com/file/d/1RNsPPZ63djnJyBbikAo831UWBMC5E_HJ/view?usp=sharing' target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFile}/> Resume</Button>
                             </Card.Body>
                         </Card>
-                    </Container>
+                    </div>
                 </section>
                 
                 <section id="photography">
@@ -73,6 +75,7 @@ class Main extends React.Component {
                     </div>
                 </section>
             </body>
+            
         )
     }
 }

@@ -1,24 +1,23 @@
-import React, { useState, useEffect} from 'react';
+import React from 'react';
 import './index.css';
 
 import Header from './Header';
 import Main from './Main';
 
 
-function App() {
-  const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => setOffsetY(window.pageYOffset);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-  return (
-    <>
+class App extends React.Component {
+  render () {
+    return (
+      
+      <>
         <Header/>
-        <Main/>
-    </>
-  );
+        <Main handleShow={this.handleShow}/>
+      </>
+      
+  
+    );
+  }
+  
 }
 
 export default App;
